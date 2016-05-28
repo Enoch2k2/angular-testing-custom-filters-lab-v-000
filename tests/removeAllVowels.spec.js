@@ -7,4 +7,10 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should remove all the vowels', function(){
+		var results = $filter('removeAllVowels')('helloworld');
+
+		expect(results).toEqual('hllwrld');
+	});
+
 });
